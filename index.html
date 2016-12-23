@@ -90,7 +90,16 @@
             也是很重要的
         </li><li>
             我不是<input type="text" name="i_job" value="" style="width:100px;" />工作者
+        </li><li>
+            刚才你问我，我可以回答一句「
+            <input type="text" name="i_answer" value="" style="width:100px;" />
+            」，但你们也不高兴，我怎么办？
+        </li><li>
+            所以说
+            <input type="text" name="i_media" value="" style="width:100px;" />
+            还是要提高自己的知识水平
         </li>
+
     </ol>
     <input type="button" name="button" value="生成" onclick="generate()" style="width:100px;" />
     </form>
@@ -142,7 +151,9 @@ init_arrays.push({
     i_affair2: "连任",
     i_law: "香港的法律",
     i_decision: "决定权",
-    i_job: "新闻"
+    i_job: "新闻",
+    i_answer:  "无可奉告",
+    i_media: "新闻界"
 });
 
 /*
@@ -240,13 +251,13 @@ function generate() {
     template += "{{i_from}}：当然啦！ \n\n";
     template += "{{i_to}}：那为什么这么早就说要{{i_affair2}}，会不会给人感觉是{{i_qinding}}？\n\n";
     template += "{{i_from}}：任何事，也要按照{{i_accord1}}，按照{{i_accord2}}来进行。";
-    template += "刚才你问我，我可以回答一句「无可奉告」，但是你们也不高兴，我怎么办？";
+    template += "刚才你问我，我可以回答一句{{i_answer}}，但是你们也不高兴，我怎么办？";
     template += "我讲的意思不是我要{{i_qinding2}}。";
     template += "你问我支持不支持，我说支持。我就明确的告诉你这一点。";
     template += "我感觉你们{{i_job}}界还需要学习，你们毕竟还是 too young ，你明白这意思吧？";
     template += "我告诉你们我是身经百战了，见得多了，{{i_west}}哪一个{{i_westcountry}}我没有{{i_went}}过？";
     template += "你们要知道，{{i_usa}}的{{i_wallace}}，比你们不知道要高到哪里去了，我跟他谈笑风生。";
-    template += "所以说媒体还是要提高自己的知识水平，识得唔识得啊？我为你们感到拙计呀……";
+    template += "所以说{{i_media}}还是要提高自己的知识水平，识得唔识得啊？我为你们感到拙计呀……";
     template += "你们有一个好，全世界跑到什么地方，你们比{{i_faster}}跑得还快，";
     template += "但是问来问去的问题呀，都 too simple ， sometimes naive ！懂了没有？\n\n";
     template += "{{i_to}}：可是能不能说一下为什么支持{{i_affair}}？\n\n";
